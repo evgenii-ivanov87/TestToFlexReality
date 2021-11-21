@@ -1,8 +1,13 @@
 import CurseList from './Components/CurseList/CurseList'
+import db from './db.json'
+
+
 
 function App() {
+
   return (
-    <CurseList/>
+   
+    <CurseList props={ db.tudos}/>
   );
 }
 
