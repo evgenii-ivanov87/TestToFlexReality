@@ -4,10 +4,11 @@ import db from './db.json'
 
 
 function App() {
-
+  const tudos = db.tudos
   return (
-   
-    <CurseList props={ db.tudos}/>
+  <>
+      {tudos.map((tudo,i) => <CurseList key={i} props={tudo}/>)}
+    </>
   );
 }
 

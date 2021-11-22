@@ -1,0 +1,15 @@
+.curseWrapper {
+  margin-right: 30px;
+}
+
+.curseWrapperList {
+  display: flex;
+  margin-right: 30px;
+  align-content: center;
+  justify-content: start;
+}
+
+.curseContainer {
+  display: flex;
+  flex-direction: column;
+}
