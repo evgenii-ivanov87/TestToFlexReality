@@ -7,9 +7,14 @@ import s from './CurseList.module.css'
 export default function CurseList(props) {
     const name = props.props.name
     const module = props.props.module
-    
+   
+    const handlerCurseID = values => {
+        props.onClick(values.props)
+        
+    }
+
     return (
-        <div className={s.curseContainer} >
+        <div className={s.curseContainer} onClick={e=>handlerCurseID(props)} >
             <div>
                 <h2>{name}</h2>
             </div>
@@ -18,12 +23,8 @@ export default function CurseList(props) {
                 <SubmittedList   mods={module}/>
                 <CreateList  mods={module} />
                 <DoneList mods={module} />
-            </div>
+            </div>                
                 
-                
-            
-                           
-        
         </div>
     )
     
