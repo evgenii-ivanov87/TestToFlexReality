@@ -2,14 +2,18 @@ import ModuleList from '../ModuleList/ModuleList'
 import s from './InProgresList.module.css'
 
 
-export default function InProgresList({name, mods}) {
-    const filterToStatus = mods.filter(mod=>mod.status ==="In progres")
+export default function InProgresList(props) {
+    const values = props.props.props.module
+    // console.log(values)
+    // const  filterToStatus = values.filter(value=>value.status ==="In progres")
   
     return (
-        
-        <div className={s.InProgresWrapper}>
-            <h2>InProgresList</h2>
-            <ModuleList mods={ filterToStatus}/>
+        <div>
+            <h2>Hello</h2>
+            <div className={s.InProgresWrapper}>
+            {/* <ModuleList mods={ filterToStatus}/> */}
+            </div>
         </div>
     )
+        
 }

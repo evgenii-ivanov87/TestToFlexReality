@@ -3,6 +3,7 @@
 }
 
 .curseWrapperList {
+  width: 800px;
   display: flex;
   margin-right: 30px;
   align-content: center;

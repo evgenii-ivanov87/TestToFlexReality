@@ -8,8 +8,7 @@ export default function Sidebar(props) {
     const name = props.props.name
     const module = props.props.module
     
-   console.log(props)
-
+   
     return (
         <div className={s.sidebarWrapper} >
             <div>

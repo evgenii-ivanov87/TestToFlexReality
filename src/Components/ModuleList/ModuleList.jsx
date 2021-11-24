@@ -3,9 +3,10 @@ import s from './ModuleList.module.css'
 
 export default function ModuleList(props) {
     const moduleTettels = props.mods
-   
+   console.log(moduleTettels)
 
     return (
+        // <h3>Hello</h3>
         <ul className={s.moduleWrapper}>
             {moduleTettels.map((moduleTettel,i) =>
                 
