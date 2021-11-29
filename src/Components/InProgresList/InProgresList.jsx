@@ -3,17 +3,28 @@ import s from './InProgresList.module.css'
 
 
 export default function InProgresList(props) {
-    const values = props.props.props.module
-    // console.log(values)
+    // const values = props.props.tudos
+   
     // const  filterToStatus = values.filter(value=>value.status ==="In progres")
-  
+    // console.log(values)
     return (
-        <div>
-            <h2>Hello</h2>
-            <div className={s.InProgresWrapper}>
-            {/* <ModuleList mods={ filterToStatus}/> */}
-            </div>
-        </div>
+        <>            
+            {/* {values.map((value, i) =>
+                    <>
+                    <h2>{value.name}</h2>
+                    <ul key={i*2}>
+                        {value.InProgres.map((value,i) => <li key={i}>{value}</li>) }
+                    </ul>
+               
+                </>        
+      
+        
+            )} */}
+                   
+           
+       <h2>I`m InProgresList</h2>
+      
+     </>       
     )
         
 }

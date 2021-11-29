@@ -17,7 +17,7 @@ export default function CurseList({name,mods}) {
         
         <div  >
             <h3>{name}</h3>
-            {mods.filter()}
+            {/* {mods.filter()} */}
             {/* <div className={s.curseWrapperList}>
                 <InProgresList props={props} />
                 <SubmittedList   mods={props}/>
