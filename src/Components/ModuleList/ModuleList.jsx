@@ -1,18 +1,11 @@
+import uuid from 'react-uuid'
+import s from './ModuleList.module.css'
 
-// import s from './ModuleList.module.css'
-
-export default function ModuleList(props) {
-    const moduleTettels = props.mods
+export default function ModuleList(item) {
+ 
   
     return (
       
-        <ul >
-            {moduleTettels.map((moduleTettel,i) =>
-                
-                     <li  key={i}>{ moduleTettel}</li>
-                ) 
-        }</ul>
-       
-    
+             <li className={s.list}  key={uuid()}>{ item.item}</li>  
     )
 }

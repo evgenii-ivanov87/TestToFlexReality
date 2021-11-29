@@ -1,16 +1,12 @@
-.curseWrapper {
-  margin-right: 30px;
+.wrapper {
+  display: flex;
 }
 
-.curseWrapperList {
-  width: 800px;
-  display: flex;
-  margin-right: 30px;
-  align-content: center;
-  justify-content: start;
-}
-
-.curseContainer {
-  display: flex;
-  flex-direction: column;
+.wapperList {
+  width: 150px;
+  height: 600px;
+  padding: 15px;
+  border: 2px solid #000;
+  margin-right: 10px;
+  overflow: auto;
 }

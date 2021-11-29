@@ -1,0 +1,4 @@
+.section {
+  display: flex;
+  border: 2px solid #000;
+}

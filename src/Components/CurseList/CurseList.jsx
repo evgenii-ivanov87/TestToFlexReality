@@ -1,33 +1,46 @@
 import InProgresList from '../InProgresList/InProgresList'
-import SubmittedList from '../SubmittedList/SubmittedList'
-import CreateList from '../CreateList/CreateList'
-import DoneList from '../DoneList/DoneList'
+import uuid from 'react-uuid'
 import s from './CurseList.module.css'
 
-export default function CurseList({name,mods}) {
+export default function CurseList(props) {
+   const tudos = props.props
    
-    console.log(name)
-    console.log(mods)
-    // const handlerCurseID = values => {
-    //     props.onClick(values.props)
-        
-    // }
-
+    const handleClick=value => props.onClick(value)
+  
     return (
         
-        <div  >
-            <h3>{name}</h3>
-            {/* {mods.filter()} */}
-            {/* <div className={s.curseWrapperList}>
-                <InProgresList props={props} />
-                <SubmittedList   mods={props}/>
-                <CreateList  mods={props} />
-                <DoneList mods={props} />
-            </div>                 */}
-                
+        <div className={s.wrapper}>
+            <div key={uuid()} className={s.wapperList}  >
+                <>
+                <h2 key={uuid()}> In Progres </h2>
+                    {tudos.map(tudo => <InProgresList key={uuid()} name={tudo.name} mods={tudo.InProgres} onClick={handleClick} />)}
+                </>
+            </div>
+
+              {/* <div key={uuid()} className={s.wapperList} >
+                <>
+                <h2 key={uuid()}> Submitted</h2>
+                {tudos.map(tudo => <InProgresList  key={uuid()} name={tudo.name} mods={tudo.Submitted} onClick={handleClick}  />)}
+                </>
+            </div>
+
+              <div key={uuid()} className={s.wapperList} >
+                <>
+                <h2 key={uuid()}> Create </h2>
+                {tudos.map(tudo => <InProgresList  key={uuid()} name={tudo.name} mods={tudo.Create} onClick={handleClick}  />)}
+                </>
+            </div>
+
+              <div key={uuid()}  className={s.wapperList} >
+                <>
+                <h2 key={uuid()}> Done </h2>
+                {tudos.map(tudo => <InProgresList key={uuid()} name={tudo.name} mods={tudo.Done} onClick={e=>handleClick}  />)}
+                </>
+            </div> */}
+            
+           
         </div>
     )
     
 }
 
-// className={s.curseContainer} onClick={e=>handlerCurseID(props)
